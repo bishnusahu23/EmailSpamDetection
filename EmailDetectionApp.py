@@ -11,7 +11,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.sentiment import SentimentIntensityAnalyzer
 import nltk
 nltk.data.path.append('/home/appuser/.nltk_data')
-
+nltk.download('stopwords', download_dir='/home/appuser/.nltk_data')
 
 # Title of the app
 st.title("📧 Email Classification: Spam or Ham")
