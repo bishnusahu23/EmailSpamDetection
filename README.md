@@ -1,4 +1,4 @@
-# Email Classification as Spam or Ham
+# Email Classification: Spam or Ham
 ## Project Overview
 This project utilizes Natural Language Processing (NLP) techniques to effectively classify emails into two categories: spam and ham (non-spam). Once classified, we will perform sentiment analysis on the identified emails to evaluate their emotional tone and gain deeper insights into their content.  
 
