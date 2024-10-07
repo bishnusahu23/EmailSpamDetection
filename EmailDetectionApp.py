@@ -10,11 +10,12 @@ from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.sentiment import SentimentIntensityAnalyzer
 
+
 # Title of the app
 st.title("📧 Email Classification: Spam or Ham")
 
-model_path = r"C:\Users\sahub\OneDrive\Desktop\Desktop\Python Ds Exclr\Assinments\Done\Naive Bayes and Text Mining\NBModel.pkl"
-vectorizer_path = r"C:\Users\sahub\OneDrive\Desktop\Desktop\Python Ds Exclr\Assinments\Done\Naive Bayes and Text Mining\tfidf.pkl"
+model_path = r"NBModel.pkl"
+vectorizer_path = r"tfidf.pkl"
 
 with open(model_path, 'rb') as model_file:
     model = pickle.load(model_file)
