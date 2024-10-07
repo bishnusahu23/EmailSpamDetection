@@ -10,8 +10,7 @@ from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.sentiment import SentimentIntensityAnalyzer
 import nltk
-nltk.download('punkt_tab', download_dir='/home/appuser/nltk_data')
-nltk.data.path.append('/home/appuser/nltk_data')
+nltk.data.path.append('/home/appuser/.nltk_data')
 
 
 # Title of the app
