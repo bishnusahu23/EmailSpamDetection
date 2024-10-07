@@ -10,11 +10,21 @@ from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.sentiment import SentimentIntensityAnalyzer
 import nltk
-nltk.data.path.append('./nltk_data')
-nltk.download('punkt', download_dir='/home/appuser/.nltk_data')
-nltk.download('punkt_tab', download_dir='/home/appuser/.nltk_data')
-nltk.download('stopwords', download_dir='/home/appuser/.nltk_data')
-nltk.download('vader_lexicon', download_dir='/home/appuser/.nltk_data')
+import os
+
+# Create a writable directory for NLTK data if it doesn't exist
+nltk_data_dir = './nltk_data'
+os.makedirs(nltk_data_dir, exist_ok=True)
+
+# Append the new directory to NLTK's data path
+nltk.data.path.append(nltk_data_dir)
+
+# Download the required NLTK datasets
+nltk.download('punkt_tab', download_dir=nltk_data_dir)
+nltk.download('punkt', download_dir=nltk_data_dir)
+nltk.download('stopwords', download_dir=nltk_data_dir)
+nltk.download('vader_lexicon', download_dir=nltk_data_dir)
+
 
 # Title of the app
 st.title("📧 Email Classification: Spam or Ham")
