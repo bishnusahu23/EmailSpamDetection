@@ -63,22 +63,20 @@ def vaderAnalyzer(text):
 input_text = st.text_area("✍️ Enter your email text here:", height=150)
 
 
-if st.button('Submit') and input_text:
-    if st.button('Submit'):
-        processed_text = preprocess_text(input_text)  
-        x = tfidf.transform([processed_text])  
-        output = model.predict(x)  
+if st.button('Submit') and input_text:  
+    processed_text = preprocess_text(input_text)  
+    x = tfidf.transform([processed_text])  
+    output = model.predict(x)  
 
-        sentiment = vaderAnalyzer(input_text) 
+    sentiment = vaderAnalyzer(input_text) 
 
-        # Customized output messages
-        if output[0].lower() == 'spam':
-            st.markdown("### 🛑 Classification Result:")
-            st.success("The email is classified as **Spam**!")
-            st.markdown(f"**Sentiment Analysis:** The email carries a **{sentiment}** sentiment.")
-            st.markdown("**Warning:** This email may contain unsolicited offers or phishing attempts. Exercise caution!")
-        else:
-            st.markdown("### ✅ Classification Result:")
-            st.success("The email is classified as **Ham (Not Spam)**!")
-            st.markdown(f"**Sentiment Analysis:** The email carries a **{sentiment}** sentiment.")
-            st.markdown("**Note:** This email appears to be legitimate. You can proceed with caution.")
+    if output[0].lower() == 'spam':
+        st.markdown("### 🛑 Classification Result:")
+        st.success("The email is classified as **Spam**!")
+        st.markdown(f"**Sentiment Analysis:** The email carries a **{sentiment}** sentiment.")
+        st.markdown("**Warning:** This email may contain unsolicited offers or phishing attempts. Exercise caution!")
+    else:
+        st.markdown("### ✅ Classification Result:")
+        st.success("The email is classified as **Ham (Not Spam)**!")
+        st.markdown(f"**Sentiment Analysis:** The email carries a **{sentiment}** sentiment.")
+        st.markdown("**Note:** This email appears to be legitimate. You can proceed with caution.")
