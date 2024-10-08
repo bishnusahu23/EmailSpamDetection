@@ -63,7 +63,7 @@ def vaderAnalyzer(text):
 input_text = st.text_area("✍️ Enter your email text here:", height=150)
 
 
-if st.button('Submit) and input_text:
+if st.button('Submit') and input_text:
     if st.button('Submit'):
         processed_text = preprocess_text(input_text)  
         x = tfidf.transform([processed_text])  
