@@ -19,3 +19,5 @@ VADER Sentiment Analyzer: Utilizing this tool to perform sentiment analysis on t
 ## Conclusion
 The implementation of Natural Language Processing (NLP) techniques for email classification has proven to be highly effective, with the model achieving an impressive accuracy of 98%. This exceptional performance demonstrates the model's ability to accurately distinguish between spam and ham emails, providing a reliable solution for email management.  
 Overall, this project showcases the power of NLP in tackling real-world problems, paving the way for further advancements in automated email processing and analysis.
+
+## Deployment link : https://emailspamdetection-2fean8uvnpsqxgky6tabax.streamlit.app/
